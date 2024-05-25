@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+/* General Styling */
+* {
+    margin: 0px;
+    padding: 0px;
+    /* cursor: url(pointer.png),auto; */
+    transition: transform 0.3s ease-in;
+}
+
+.scaling:hover {
+    transform: scale(1.1);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url(background.jpg) no-repeat center fixed;
+    color: #eee;
+    background-size: cover;
+    letter-spacing: 2px;
+}
+
+.body-and-footer {
+    height: 660px;
+}
+
+.website-body {
+    display: flex;
+    height: 550px;
+}
+
+
+.navbar {
+    /* background-color: floralwhite; */
+    /* background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.3)); */
+    background-color: ghostwhite;
+    /* opacity: 0.8; */
+    width: 325px;
+    /* height: 550px; */
+    height: 630px;
+    text-align: center;
+    text-transform: capitalize;
+    border: 3px solid chartreuse;
+    border-radius: 15px 30px 30px 15px;
+    transition: transform 0.5s ease-in;
+    position: absolute;
+}
+
+.navbar #photo {
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+}
+
+.navbar #name {
+    margin-bottom: 45px;
+    color: blueviolet;
+    font-size: 28px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.navbar ul {
+    list-style: none;
+    /* font-family: Verdana, Geneva, Tahoma; */
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+}
+
+.navbar li {
+    margin-bottom: 40px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: orange;
+}
+
+.navbar li a:hover {
+    font-size: 24px;
+    transition: font-size 0.2s ease-in;
+}
+
+.navbar-go {
+    /* transform: translate(-335px, 0); */
+    transform: translate(-535px,0);
+    position: fixed;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+
+.cross {
+    margin-left: 270px;
+    margin-top: 10px;
+}
+
+.ham {
+    margin-top: 10px;
+}
+
+.ham:hover {
+    width: 30px;
+}
+
+.cross:hover {
+    width: 30px;
+}
+
+.main {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-contain {
+    margin-top: auto;
+    background-color: rgb(76 0 130 / 60%);
+    width: auto;
+    height: 120px;
+}
+.footer-contain footer{
+    display: flex;
+    justify-content: space-around;
+}
+.footer-contain .footer-myinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-contain h2 {
+    font-weight: bold;
+    color: chartreuse;
+}
+.footer-contain p{
+    color: coral;
+}
+.footer-contain em{
+    color: aqua;
+}
+.footer-info-icons{
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    margin-top: 10px;
+    color: fuchsia;
+}
+.fa-github:before , .fa-linkedin:before , .fa-facebook:before , .fa-twitter:before{
+    color: fuchsia;
+}
+.copyright-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.copyright-info a{
+    text-decoration: none;
+    color: wheat;
+    border: 1px dashed chocolate;
+}
+.copyright-info p{
+    color: wheat;
+    margin-top: 20px;
+}
+
+
+.about-footer{
+    margin-top: 120px;
+}
+
+/* index page styling */
+.index-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75vw;
+    height: 30vw;
+    margin: 90px auto;
+    justify-content: space-around;
+}
+
+.index-dev-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.index-dev-info h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+}
+
+.index-dev-info h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.index-dev-info h1 {
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.butt {
+    margin-top: 30px;
+}
+
+.butt button {
+    padding: 8px 10px;
+    margin: 0px 7px;
+    border-radius: 18px;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.butt button:hover {
+    /* padding: 9px 11px; */
+    color: dodgerblue;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.index-dev-photo img {
+    height: 383px;
+    border-radius: 80px;
+    border: 1px solid rgb(157, 231, 231);
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 0px 0px 0px;
+}
+
+.social-links a img {
+    width: 40px;
+    border-radius: 15px;
+}
+
+.social-links a img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact page styling */
+.contact-form {
+    width: 800px;
+    height: 500px;
+    margin-top: auto;
+    /* background-color: cadetblue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-label {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 45px;
+}
+
+.error-msg {
+    font-size: 15px;
+    align-self: center;
+    width: auto;
+    height: auto;
+}
+
+em {
+    color: red;
+}
+
+.warning {
+    color: cyan;
+    margin-top: 5px;
+}
+
+.client-details {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.c-detail {
+    margin-top: 20px;
+}
+
+.c-confirm {
+    display: flex;
+    margin-top: 10px;
+}
+
+.c-confirm input {
+    height: 20px;
+    width: 20px;
+}
+
+.c-detail .label {
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.c-detail .form-input {
+    height: 27px;
+    width: 250px;
+    border-radius: 8px;
+    border: 3px solid blueviolet;
+    margin-left: 27px;
+}
+
+.c-detail select {
+    margin-left: 10px;
+    height: 30px;
+    width: 200px;
+    border: 3px solid blueviolet;
+    border-radius: 10px;
+}
+
+.c-detail#msg {
+    display: flex;
+}
+
+label[for="gender"] {
+    margin-left: 60px;
+}
+
+.gender {
+    margin-left: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+#msg textarea {
+    max-width: 490px;
+    max-height: 170px;
+    margin-left: 10px;
+    border: 3px solid blueviolet;
+    border-radius: 0px 20px 10px 20px;
+}
+
+.submit {
+    border-radius: 18px;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    border: 2px solid black;
+}
+
+.submit:hover {
+    color: dodgerblue;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.reset-btn {
+    margin-left: 70px;
+}
+
+.submit-contact {
+    margin-left: 200px;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+}
+
+/* Styling for php file */
+.confirm-it em {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.confirm-it-details {
+    margin-left: 5px;
+    font-size: 20px;
+    color: springgreen;
+}
+
+.align-confirm {
+    display: flex;
+}
+
+.confirm-label {
+    color: cornsilk;
+}
+
+/* Styles for about me page */
+/* About me text section */
+
+/* .about-container {
+
+} */
+.about-body{
+    height: 45vw;
+}
+.about-me {
+    /* background-color: cadetblue; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 160px;
+    margin-top: 20px;
+}
+
+.about-title {
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 45px;
+}
+
+.about-text {
+    font-family: cursive;
+    font-size: 20px;
+    color: darkseagreen;
+    border: 1px solid aqua;
+    margin-top: 5px;
+}
+
+/* Skill section */
+.my-skills {
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    height: 340px;
+}
+
+.my-skills .skill-title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    margin-left: 120px;
+}
+
+.skill-data {
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid aqua;
+    margin-left: 140px;
+}
+
+.skill-data-1 {
+    margin-left: 30px;
+}
+
+.skill-data-2 {
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.skill {
+    text-transform: uppercase;
+    font-family: cursive;
+    margin-top: 10px;
+}
+
+.skill-level {
+    display: flex;
+}
+
+.skill-percent {
+    font-family: cursive;
+}
+
+.skill-level-bar {
+    height: 15px;
+    width: 300px;
+    display: flex;
+}
+
+.skill-level-bar-contain {
+    height: 15px;
+    width: 300px;
+    background-color: gainsboro;
+}
+
+.skill-level-bar-taken {
+    height: 15px;
+    background-color: brown;
+}
+
+.skill-level-bar-taken#python {
+    width: calc(300px*0.7);
+}
+
+.skill-level-bar-taken#java {
+    width: calc(300px*0.5);
+}
+
+.skill-level-bar-taken#html {
+    width: calc(300px*0.7);
+}
+
+.skill-level-bar-taken#css {
+    width: calc(300px*0.5);
+}
+
+.skill-level-bar-taken#c {
+    width: calc(300px*0.5);
+}
+
+.skill-level-bar-taken#javascript {
+    width: calc(300px*0.3);
+}
+
+.skill-level-bar-taken#git-github {
+    width: calc(300px*0.6);
+}
+
+.skill-level-bar-taken#mysql {
+    width: calc(300px*0.6);
+}
+
+.skill-level-bar-taken#php {
+    width: calc(300px*0.3);
+}
+
+
+/* Time line section */
+.timeline-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-contain,
+.experience-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edu-heading {
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    align-self: center;
+    margin-left: 120px;
+    border-bottom: 2px solid dodgerblue;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    margin-left: 180px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid aqua;
+    /* border-radius: 10px; */
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    background-color: black;
+}
+
+/* .styled-table tr:hover {
+    transform: scale(1.1);
+} */
+.styled-table tbody tr td {
+    border: 1px solid white;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: white;
+}
+
+.styled-table tbody tr:nth-of-type(even) td {
+    border: 1px solid black;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+/* projects styling */
+.project-body{
+    height: 110vw;
+}
+.projects-contain{
+    /* background-color: #009879; */
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project-title{
+    margin-bottom: 10px;
+    font-size: 50px;
+    margin-top: 15px;
+    border-bottom: 2px solid dodgerblue;
+    font-family: 'Rubik', sans-serif;
+}
+.project{
+    margin-top: 50px;
+    display: flex;
+}
+.project:nth-of-type(odd){
+    flex-direction: row-reverse;
+}
+.project img{
+    width: 460px;
+    height: 180px;
+}
+.project img:hover{
+    transform: scale(1.05);
+}
+.pr-details{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.project:nth-of-type(odd) .pr-details{
+    margin-left: 0px;
+}
+.tech-used{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.5;
+}
+.pr-name{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.pr-info{
+    color: chocolate;
+}
+.pr-link{
+    margin-top: 20px;
+}
+.pr-link a{
+    color: aqua;
+    text-decoration: none;
+}
+.pr-link a:hover{
+    color: blue;
+}
+
+
+/* Achievement section */
+.achievements-body{
+    height: 140vw;
+}
+.ach-contain{
+    width: 80vw;
+}
+.ach-title{
+    text-align: center;
+    font-size: 45px;
+    width: 83vw;
+    margin-top: 10px;
+    border: 2px dashed aqua ;
+    font-family: 'Rubik', sans-serif;
+}
+
+.certify-contain-title{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-family: Ubuntu, sans-serif;
+}
+.certify-row{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+/* .certificate-1{
+    background-color: rgb(49 31 52 / 92%);
+    background-color: #5f9ea042;
+    width: 280px;
+    height: 400px;
+    padding-top: 20px;
+    margin-left: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+} */
+.certificate{
+    /* background-color: rgb(49 31 52 / 92%); */
+    background-color: #5f9ea042;
+    width: 280px;
+    height: 400px;
+    padding-top: 20px;
+    margin-left: 40px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.certificate:hover{
+    transform: scale(1.05);
+}
+.certify-logo img{
+    width: 260px;
+    height: 150px;
+}
+.certificate-title{
+    font-size: 25px;
+    margin: 0px 10px;
+}
+.certificate-title:hover{
+    color: darkorange;
+}
+.certificate-info{
+    color: greenyellow;
+    margin: 0px 15px;
+}
+.certify-link a{
+    text-decoration: none;
+    font-size: 20px;
+    color: cyan;
+}
+.certify-link a:hover{
+    color: blueviolet;
+}
+.other{
+    margin-top: 10vw;
+}
+
+/* Some additional css for contact form */
+.contact-form #status{
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* Media queries for responsiveness */
+@media (max-width:970px) {
+    /* .navbar-go{
+        transform: translate(-335px,0);
+        position: absolute;
+    } */
+}
+
+/* 
+use display,visibility,position,flex,grid
+*/

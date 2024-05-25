@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abubakar Mulla, Software Engineer</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../static/img/am.ico" type="image/x-icon">
+    <script src="../static/js/main.js"></script>
+</head>
+
+<body>
+    <div class="body-and-footer">
+        <div class="website-body">
+            <div class="navbar navbar-go">
+                <nav>
+                    <img id="photo" src="../static/img/My_Photo_navbar.jpeg" alt="Abubakar_Img">
+                    <h2 id="name">Abubakar Mulla</h2>
+                    <ul>
+                        <li><a href="/portfolio">Home</a></li>
+                        <li><a href="/portfolio/about">About Me</a></li>
+                        <li><a href="/portfolio/timeline">Timeline</a></li>
+                        <li><a href="/portfolio/projects">Projects</a></li>
+                        <li><a href="/portfolio/achievements">Achievements</a></li>
+                        <li><a href="/portfolio/contact-us">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main">
+                <div class="hamburger">
+                    <img src="../static/img/hamburger.png" alt="hamburger" class="ham" width="27px">
+                    <img src="../static/img/cross.jpg" alt="cross" class="cross" width="27px">
+                </div>
+                <div class="contact-form">
+                    <!-- Form Starts -->
+                    <form action="/portfolio/contact-us" method="post" id="form-validate" onsubmit="return validate_data()">
+                        <div id="status">{{ st }}</div>
+                        {% csrf_token %}
+                        <div class="contact-us-label" ondblclick="dblclick(this)">Contact Us</div>
+                        <div class="client-details">
+
+                            <div class="c-detail">
+                                <label class="label" for="fname">Name<em>*</em></label>
+                                <input class="form-input" type="text" name="fname" placeholder="First Name" id="fname"
+                                    onfocus="focusevent(this)" onblur="blurevent(this)">
+                                <label for="lname"></label>
+                                <input class="form-input" type="text" name="lname" placeholder="Last Name" id="lname"
+                                    onfocus="focusevent(this)" onblur="blurevent(this)">
+                            </div>
+
+                            <div class="c-detail">
+                                <label class="label" for="email">Email<em>*</em></label>
+                                <input class="form-input" type="email" name="email" placeholder="Email" id="email"
+                                    onfocus="focusevent(this)" onblur="blurevent(this)">
+                            </div>
+
+                            <div class="c-detail">
+                                <label class="label" for="phone">Phone<em>*</em></label>
+                                <input class="form-input" type="number" name="phone" placeholder="Phone Number"
+                                    id="phone" onfocus="focusevent(this)" onblur="blurevent(this)">
+                            </div>
+
+
+                            <div class="c-detail">
+                                <label class="label" for="subject-select">Subject<em>*</em></label>
+                                <select name="subject" id="subject-select" onchange="changeit(this)" required>
+                                    <option value="">---select---</option>
+                                    <option value="personal-query">Personal query</option>
+                                    <option value="business-query">Business query</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                                <label class="label" for="gender">Gender<em>*</em></label>
+                                <input class="gender" type="radio" name="gender" id="genderM" value="Male" required>Male
+                                <input class="gender" type="radio" name="gender" id="genderF" value="Female"
+                                    required>Female
+                                <input class="gender" type="radio" name="gender" id="genderO" value="Other"
+                                    required>Other
+                            </div>
+
+                            <div class="c-detail" id="msg">
+                                <label class="label" for="message" id="message-label"></label><em>*</em>
+                                <textarea name="message" id="message" cols="50" rows="6"
+                                    placeholder="What is there in you mind....." required></textarea>
+                            </div>
+
+                            <div class="c-confirm">
+                                <input type="checkbox" required>
+                                <p class="warning">whether information is correct<em>*</em></p>
+                            </div>
+
+                            <p class="warning"><em>*</em> must be filled </p>
+
+                            <div class="submit-contact">
+                                <div>
+                                    <button type="submit" value="Submit" name="submit" class="submit"
+                                        id="submit">Submit</button>
+                                </div>
+                                <div>
+                                    <input type="reset" value="Reset" name="reset" class="submit reset-btn">
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                    <!-- Form ends -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-contain about-footer">
+            <footer>
+                <div class="footer-myinfo">
+                    <h2 ondblclick="dblclick(this)">Abubakar Mulla</h2>
+                    <p>Certified Python Developer and a Beginner Web developer</p>
+                    <em>For more info contact me</em>
+                    <div class="footer-info-icons">
+                        <a href="https://github.com/abubakarmulla" target="_blank"><i
+                                class="fa fa-github fa-2x scaling"></i></a>
+                        <a href="https://twitter.com/abubakarnmulla" target="_blank"><i
+                                class="fa fa-twitter fa-2x scaling"></i></a>
+                        <a href="https://www.linkedin.com/in/abubakarmulla23/" target="_blank"><i
+                                class="fa fa-linkedin fa-2x scaling"></i></a>
+                        <a href="https://www.facebook.com/people/Abubakar-Mulla/100077491524959/" target="_blank"><i
+                                class="fa fa-facebook fa-2x scaling"></i></a>
+                    </div>
+                </div>
+                <div class="copyright-info">
+                    <p>Copyright &copy;2022 AbubakarMulla, All rights reserved</p>
+                    <p>Designed by</p>
+                    <a href="https://github.com/abubakarmulla" target="_blank">Abubakar Mulla</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="../static/js/main.js"></script>
+</body>
+<script>
+    window.oncontextmenu = (e) => {
+        e.preventDefault();
+    }
+</script>
+
+</html>
